@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BD XML Nativas</title>
+	<lik rel="stylesheet" href="">
+		<style type="text/css" media="screen">
+			#imagen{
+				background-color: white;
+				padding-right: 39em;
+				padding-left: 39em; 
+			}
+			table {
+				background-color: darkgrey;
+				padding-top: 10px;
+			}
+			#menu {
+				list-style-type: none;
+			}
+			#menu li {
+				display: inline;
+				background-color: darkgrey;
+				line-height:30px; 
+			}
+			#menu li a {
+				text-decoration: none;
+				font-size: 20px;
+				padding: 20px;
+			}
+			#menu li a:hover {
+				background-color: grey;
+			}
+			#introduccion {
+				margin-left: 5em;
+				margin-right: 15em;
+				line-height:30px;
+				font-weight:bold;
+				text-align: justify;
+			}
+			#caracteristicas {
+				margin-left: 10em;
+				margin-right: 20em;
+				line-height:30px;
+				font-weight:bold;
+				text-align: justify;
+			}
+			#apartados {
+				margin-left: 5em;
+				padding-left: 15px;
+			}
+			#ul {
+				margin-left: 5em;
+			}
+		</style>
+</head>
+<body bgcolor="grey">
+	<header id="header" class="">
+			<img id="imagen" src="basex.png" alt="">
+	</header><!-- /header -->
+	<nav>
+		<table width="100%">
+				<tbody>
+					<tr>
+						<td>
+							<ul id="menu">
+								<li><a href="PaginaPricipal.html"><font color="black" face="Impact">PaginaPrincipal</font></a></li>
+								<li><a href="basex.html"><font color="black" face="Impact">BaseX</font></a></li>
+								<li><a href="existdb.html"><font color="black" face="Impact">eXist-db</font></a></li>
+								<li><a href="marklogic.html"><font color="black" face="Impact">MarkLogic</font></a></li>
+								<li><a href="sedna.html"><font color="black" face="Impact">Sedna</font></a></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+	</nav>
+	<article>
+		<h1><font color="darkgrey" face="Impact" style="margin-left: 15px">Caracteristicas, funcionamiento e instalación de BaseX</font></h1>
+	</article>
+	<section>
+		<p id="introduccion">
+			Una de las Bases de Datos XML Nativas que vamos a estudiar será BaseX.
+				<br>
+			BaseX es una Base de Datos XML escalable, con un alto rendimiento, y muy ligera. Con procesador XPath/XQuery y soporte de la última actualización de la W3C, lo hace una opción idónea para nuestro trabajo.
+				<br>
+			Entre sus características se encuentran:
+				<br>
+		</p>
+			<ul id="ul">
+				<li><b>Alto rendimiento de almacenamiento con texto, atributos, texto completo y rutas.</b></li>
+				<li><b>Apoyo de las Recomendaciones del W3C XPath/XQuery.</b></li>
+				<li><b>Una de las más altas tasas de cumplimiento para todas las especificaciones admitidas.</b></li>
+				<li><b>Arquitectura Cliente/Servidor, con soporte de transacciones seguras ACID, gestión de usuarios y autenticación.</b></li>
+				<li><b>Visualizaciones altamente interactivas, con soporte para documentos XML de gran extensión.</b></li>
+				<li><b>Editor XQuery en tiempo real disponible, con resaltado de sintaxis y feedback de errores.</b></li>
+				<li><b>Amplia gama de interfaces: REST/RESTXQ, WebDAV, XQJ, XML:DB.</b></li>
+			</ul>
+				<br>
+		<p id="introduccion">
+			En cuanto a su instalación es realmente sencilla. En Ubuntu se encuentra disponible el paquete basex del cual procederemos a la instalación: <br> sudo apt-get install basex
+				<br>
+			A continuación procedemos a arrancar el servidor mediante la orden: <br> sudo basexserver
+				<br>
+			Una vez arrancado el servidor ya tenemos a nuestra disposición el control del servidor, con lo cual podemos ejecutar todas las órdenes que nos permite BaseX.
+				<br>
+			Por ejemplo, podemos crear una base de datos nueva mediante un documento XML con CREATE DB: <br> CREATE DB factbook factbook.xml
+				<br>
+			Cabe recalcar que todas las Bases de Datos se almacenan en /home/BaseXData.
+				<br>
+			Obviamente, podemos ejecutar consultas con XQuery mediante XQUERY: <br> XQUERY //country
+				<br>
+			Esta consulta nos devolverá todos los nodos del tipo “country” de nuestra base de datos actual.
+				<br>
+			Por último, podemos cerrar o borrar nuestra actual base de datos mediante CLOSE o DROP DB.
+				<br>
+			Otras operaciones que permite BaseX es cambiar de base de datos, crear colecciones de documentos, borrar documentos, borrar colecciones, obtener información del servidor (listar bases de datos, documentos, usuarios…) y realizar copias de seguridad.
+				<br>
+			En la próxima entrada se describirá la cuarta Base de Datos XML Nativa con la que conlcuiremos la fase de instalación y entraremos con XQuery y la ejecución de las pruebas y toma de resultados.
+		</p>
+	</section>
+	<br><br>
+	<footer>
+		<br>
+		<p id="introduccion">Aqui un video resumiendo el funcionamiento...</p>
+		<center>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/QnejACE4xME" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</center>
+	</footer>
+	<br><br>
+	<table width="100%">
+				<tbody>
+					<tr>
+						<td>
+							<ul id="menu">
+								<li><a href="PaginaPricipal.html"><font color="black" face="Impact">PaginaPrincipal</font></a></li>
+								<li><a href="basex.html"><font color="black" face="Impact">BaseX</font></a></li>
+								<li><a href="existdb.html"><font color="black" face="Impact">eXist-db</font></a></li>
+								<li><a href="marklogic.html"><font color="black" face="Impact">MarkLogic</font></a></li>
+								<li><a href="sedna.html"><font color="black" face="Impact">Sedna</font></a></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+	</table>
+	<br><br>
+</body>
+</html>

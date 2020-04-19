@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BD XML Nativas</title>
+	<lik rel="stylesheet" href="">
+		<style type="text/css" media="screen">
+			#imagen{
+				background-color: white;
+				padding-right: 35em;
+				padding-left: 34em; 
+			}
+			table {
+				background-color: darkgrey;
+				padding-top: 10px;
+			}
+			#menu {
+				list-style-type: none;
+			}
+			#menu li {
+				display: inline;
+				background-color: darkgrey;
+				line-height:30px; 
+			}
+			#menu li a {
+				text-decoration: none;
+				font-size: 20px;
+				padding: 20px;
+			}
+			#menu li a:hover {
+				background-color: grey;
+			}
+			#introduccion {
+				margin-left: 5em;
+				margin-right: 15em;
+				line-height:30px;
+				font-weight:bold;
+				text-align: justify;
+			}
+			#caracteristicas {
+				margin-left: 10em;
+				margin-right: 20em;
+				line-height:30px;
+				font-weight:bold;
+				text-align: justify;
+			}
+			#apartados {
+				margin-left: 5em;
+				padding-left: 15px;
+			}
+			#ul {
+				margin-left: 5em;
+			}
+		</style>
+</head>
+<body bgcolor="grey">
+	<header id="header" class="">
+			<img id="imagen" src="exist2.png" alt="">
+	</header><!-- /header -->
+	<nav>
+		<table width="100%">
+				<tbody>
+					<tr>
+						<td>
+							<ul id="menu">
+								<li><a href="PaginaPricipal.html"><font color="black" face="Impact">PaginaPrincipal</font></a></li>
+								<li><a href="basex.html"><font color="black" face="Impact">BaseX</font></a></li>
+								<li><a href="existdb.html"><font color="black" face="Impact">eXist-db</font></a></li>
+								<li><a href="marklogic.html"><font color="black" face="Impact">MarkLogic</font></a></li>
+								<li><a href="sedna.html"><font color="black" face="Impact">Sedna</font></a></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+	</nav>
+	<article>
+		<h1><font color="darkgrey" face="Impact" style="margin-left: 15px">Caracteristicas, funcionamiento e instalación de eXist-db</font></h1>
+	</article>
+	<section>
+		<p id="introduccion">
+			eXist-db es un sistema de gestión de bases de datos libre y de código abierto que almacena datos XML de acuerdo a un modelo de datos XML.
+				<br>
+			Algunas de sus características son:
+				<br>
+		</p>
+			<ul id="ul">
+				<li><b>Soporte para distintos lenguajes de consultas XML como XQuery, XPath y XSLT.</b></li>
+				<li><b>Indexación de documentos y soporte para la actualización de los datos y para multitud de protocolos como SOAP, XML-RPC, WebDav y REST y en la actualidad cumple el estandarestándar XQuery.</b></li>
+			</ul>
+		<p id="introduccion">
+			Se pueden realizar distintas instalaciones:
+		</p>
+			<ul id="ul">
+				<li><b>Mediante un fichero de instalación  (.jar multiplataforma). Al ejecutar el instalador (java -jar fichero.jar) aparece un asistente guiándote en el proceso de instalación.</b></li>
+				<li><b>Mediante un fichero .war para incluirlo en un servidor Cocoon.</b></li>
+				<li><b>Mediante el código fuente.</b></li>
+			</ul>
+		<p id="introduccion">
+			Otra opción para instalarla y de mantenerla siempre actualizada es la siguiente. Pasos: 
+		</p>
+			<ul id="ul">
+				<li><b>Instalar un cliente de subversion (apt-get install subversion)</b></li>
+				<li><b>Seleccionar la rama del código fuente a instalar:</b>
+					<ul>
+						<li>Versión estable (liberada) <br> (https://exist.svn.sourceforge.net/svnroot/exist/release)</li>
+						<li>Versión actualizada <br> (https://exist.svn.sourceforge.net/svnroot/exist/branches/eXist-stable-1.2/)</li>
+						<li>VersiónTrunk <br> (https://exist.svn.sourceforge.net/svnroot/exist/trunk/)</li>
+					</ul>
+				</li>
+				<li><b>Mediante el código fuente.</b></li>
+			</ul>
+	</section>
+	<br><br>
+	<table width="100%">
+				<tbody>
+					<tr>
+						<td>
+							<ul id="menu">
+								<li><a href="PaginaPricipal.html"><font color="black" face="Impact">PaginaPrincipal</font></a></li>
+								<li><a href="basex.html"><font color="black" face="Impact">BaseX</font></a></li>
+								<li><a href="existdb.html"><font color="black" face="Impact">eXist-db</font></a></li>
+								<li><a href="marklogic.html"><font color="black" face="Impact">MarkLogic</font></a></li>
+								<li><a href="sedna.html"><font color="black" face="Impact">Sedna</font></a></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+	</table>
+	<br><br>
+</body>
+</html>

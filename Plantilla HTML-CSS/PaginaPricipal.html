@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BD XML Nativas</title>
+	<lik rel="stylesheet" href="">
+		<style type="text/css" media="screen">
+			#titulo {
+				padding-left: 50px;
+				font-size: 50px;
+			}
+			table {
+				background-color: darkgrey;
+				padding-top: 10px;
+			}
+			#menu {
+				list-style-type: none;
+			}
+			#menu li {
+				display: inline;
+				background-color: darkgrey;
+				line-height:30px; 
+			}
+			#menu li a {
+				text-decoration: none;
+				font-size: 20px;
+				padding: 20px;
+			}
+			#menu li a:hover {
+				background-color: grey;
+			}
+			#introduccion {
+				margin-left: 5em;
+				margin-right: 15em;
+				line-height:30px;
+				font-weight:bold;
+				text-align: justify;
+			}
+			#caracteristicas {
+				margin-left: 10em;
+				margin-right: 20em;
+				line-height:30px;
+				font-weight:bold;
+				text-align: justify;
+			}
+			#apartados {
+				margin-left: 5em;
+				padding-left: 15px;
+			}
+			#ul {
+				margin-left: 5em;
+			}
+		</style>
+</head>
+<body bgcolor="grey">
+	<header id="header" class="">
+			<p id="titulo"><font color="darkgrey" face="Impact">Bases de Datos XML Nativas</font></p>
+	</header><!-- /header -->
+	<nav>
+		<table width="100%">
+				<tbody>
+					<tr>
+						<td>
+							<ul id="menu">
+								<li><a href="PaginaPricipal.html"><font color="black" face="Impact">PaginaPrincipal</font></a></li>
+								<li><a href="basex.html"><font color="black" face="Impact">BaseX</font></a></li>
+								<li><a href="existdb.html"><font color="black" face="Impact">eXist-db</font></a></li>
+								<li><a href="marklogic.html"><font color="black" face="Impact">MarkLogic</font></a></li>
+								<li><a href="sedna.html"><font color="black" face="Impact">Sedna</font></a></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+	</nav>
+	<article>
+		<h1><font color="darkgrey" face="Impact" style="margin-left: 15px">¿En qué consisten las Bases de Datos nativas en XML?</font></h1>
+	</article>
+	<section>
+		<p id="introduccion">
+			Las bases de datos nativas definen un modelo lógico para el documento XML, además, almacena y recupera documentos de la misma manera que los XML. Este modelo debe incluir atributos como PCDATA y documentos en orden. Ejemplos de estos modelos son XPath, XML Infoset y modelos DOM y SAX 1.0.
+				<br><br>
+			Todas las bases de datos relacionales son centradas en los Datos, lo que ellos almacenan en sus campos son datos simples más conocidos como datos atómicos. Una base de datos nativa en XML, no posee campos, ni almacena datos atómicos, lo que almacena son documentos XML, a este tipo de bases de datos se les denomina bases de datos centradas en documentos.
+				<br><br>
+			Diversos productos contienen diferentes características para las bases de datos nativas en XML, pero generalmente tienen las siguientes características:
+				<br><br>
+
+			
+			<h3 id="apartados">Procesamiento de datos: </h3>
+			<p id="caracteristicas">
+				El procesamiento de datos en este tipo de bases de datos parecería ser algo muy beneficioso, pero realmente no es así, debido al formato jerárquico en el que está almacenada la información. Muchas bases de datos necesitan que el usuario recupere todo el documento XML, lo actualice con el XML API de su preferencia y posteriormente vuelva a almacenar el documento en el repositorio. Esto se debe a que aún no existe un lenguaje estándar que permita la actualización, inserción o eliminación de elementos de un documento XML. Existe un lenguaje que permite realizar actualizaciones en un documento XML pero aún no es un estándar y muchos gestores de este tipo de bases de datos no lo soportan, este lenguaje es Xupdate.
+				<br><br>
+			</p>
+
+			<h3 id="apartados">Almacenamiento: </h3>
+			<p id="caracteristicas">
+				Por deducción lógica, una base de datos nativa en XML almacena la información en formato XML, pero esto es solamente una deducción lógica, pues este tipo de bases de datos tienen repositorios con un formato "tipo XML", como puede ser DOM o Infoset. En este mismo "repositorio" (paquete de archivos) se almacenan los índices que se generan por cada documento XML almacenado.
+				<br><br>
+			</p>
+
+			<h3 id="apartados">Búsquedas: </h3>
+			<p id="caracteristicas">
+				Este tipo de bases de datos no utiliza SQL como lenguaje de consulta. En lugar de ello utilizan Xpath. Algunas bases de datos permiten seleccionar los elementos que deberán tener índices mientras que otras bases de datos indexan todo el contenido del documento. El problema que tienen las búsquedas en este tipo de bases de datos es que no permiten realizar búsquedas muy complicadas, como por ejemplo ordenamiento y cross join, debido a que Xpath no fue creada realmente para búsquedas en bases de datos, sino simplemente para búsquedas en un solo documento.
+
+				Muchas bases de datos permiten realizar búsquedas utilizando la tecnología Full-Text Search, de esta manera se puede agilizar la búsqueda de datos en los documentos XML.
+			</p>
+		</p>
+		<p id="introduccion">
+			Solo existe un requisito para cualquier aplicación donde se requiera usar NXD: la aplicación debe usar XML. Después de esto no existe ninguna restricción o regla para no utilizar NXD en una aplicación. En general, cualquier NXD es una excelente herramienta para almacenar documentos orientados a datos (Ej. XHTML o DocBook), la información que tiene una compleja estructuración anidada profundamente y la información que esta semi-estructurada en la naturaleza. Básicamente, si la información es representada por XML un NXD probablemente seria una buena solución. Un NXD puede almacenar cualquier tipo de información XML, pero probablemente no seria la mejor herramienta para algo como un sistema de la contabilidad donde los datos son muy bien definidos y rígidos.
+				<br><br>
+			Algunas áreas potenciales de aplicación podrían ser:
+		</p>
+			<ul id="ul">
+				<li><b>Portales de información corporativa</b></li>
+				<li><b>Información de catálogos</b></li>
+				<li><b>BD en partes de manufactura</b></li>
+				<li><b>Información médica</b></li>
+				<li><b>BD personalizadas</b></li>
+			</ul>
+			<br><br>
+	</section>
+	<table width="100%">
+				<tbody>
+					<tr>
+						<td>
+							<ul id="menu">
+								<li><a href="PaginaPricipal.html"><font color="black" face="Impact">PaginaPrincipal</font></a></li>
+								<li><a href="basex.html"><font color="black" face="Impact">BaseX</font></a></li>
+								<li><a href="existdb.html"><font color="black" face="Impact">eXist-db</font></a></li>
+								<li><a href="marklogic.html"><font color="black" face="Impact">MarkLogic</font></a></li>
+								<li><a href="sedna.html"><font color="black" face="Impact">Sedna</font></a></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+	</table>
+	<br><br>
+</body>
+</html>

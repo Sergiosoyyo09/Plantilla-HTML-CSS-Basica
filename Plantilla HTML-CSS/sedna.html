@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BD XML Nativas</title>
+	<lik rel="stylesheet" href="">
+		<style type="text/css" media="screen">
+			#imagen{
+				background-color: white;
+				padding-right: 35em;
+				padding-left: 35em; 
+			}
+			table {
+				background-color: darkgrey;
+				padding-top: 10px;
+			}
+			#menu {
+				list-style-type: none;
+			}
+			#menu li {
+				display: inline;
+				background-color: darkgrey;
+				line-height:30px; 
+			}
+			#menu li a {
+				text-decoration: none;
+				font-size: 20px;
+				padding: 20px;
+			}
+			#menu li a:hover {
+				background-color: grey;
+			}
+			#introduccion {
+				margin-left: 5em;
+				margin-right: 15em;
+				line-height:30px;
+				font-weight:bold;
+				text-align: justify;
+			}
+			#caracteristicas {
+				margin-left: 10em;
+				margin-right: 20em;
+				line-height:30px;
+				font-weight:bold;
+				text-align: justify;
+			}
+			#apartados {
+				margin-left: 5em;
+				padding-left: 15px;
+			}
+			#ul {
+				margin-left: 5em;
+			}
+		</style>
+</head>
+<body bgcolor="grey">
+	<header id="header" class="">
+			<img id="imagen" src="sedna.jpg" alt="">
+	</header><!-- /header -->
+	<nav>
+		<table width="100%">
+				<tbody>
+					<tr>
+						<td>
+							<ul id="menu">
+								<li><a href="PaginaPricipal.html"><font color="black" face="Impact">PaginaPrincipal</font></a></li>
+								<li><a href="basex.html"><font color="black" face="Impact">BaseX</font></a></li>
+								<li><a href="existdb.html"><font color="black" face="Impact">eXist-db</font></a></li>
+								<li><a href="marklogic.html"><font color="black" face="Impact">MarkLogic</font></a></li>
+								<li><a href="sedna.html"><font color="black" face="Impact">Sedna</font></a></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+	</nav>
+	<article>
+		<h1><font color="darkgrey" face="Impact" style="margin-left: 15px">Caracteristicas, funcionamiento e instalación de Sedna</font></h1>
+	</article>
+	<section>
+		<p id="introduccion">
+			Sedna, es un sistema de gestión de base de datos XML nativa de código abierto, implementado a partir de cero con todas las funciones de administración de una base de datos, para almacenar grandes cantidades de datos XML.
+				<br>
+			La aportación especial de la base de datos Sedna, es su estrategia de almacenamiento mejorado basado en esquemas (schema-driven storage strategy), que permite gran eficiencia a la hora de procesar las consultas y almacenamientos en la BBDD. Y un sistema de manejo de  memoria muy novedoso.
+				<br>
+			En el apartado, dentro del almacenamiento, debemos mencionar también un elemento novedoso de Sedna, las relaciones de inclusión entre elementos: Se utilizan punteros directos, para representar relaciones de un nodo XML como padre, hijo con sus respectivos hermanos.Este método a diferencia de enfoques relacionales que requieren realizar “joins” para atravesar un documento XML, permite realizar esto, a través de un puntero directo.
+		</p>
+				<br><br>
+		<p id="introduccion">
+			Para instalar podemos seguir los siguientes pasos:
+				<br><br>
+			Como podemos ver desde su web, podemos descargar dicha base de datos, para múltiples plataformas, nosotros hemos escogido Linux porque al no tener interfaz gráfica, la consola de Linux nos parece mucho más amigable.
+				<br><br>
+			En la sección de documentación de su web, están todos los pasos más detallados de la instalación http://sedna.org/documentation.html por ello, no entraremos en mucho detalle.
+				<br><br>
+			Una vez, descargado el archivo .sh e instalado en el directorio deseado, por ejemplo /usr/var/, deberemos cambiar la configuración del kernel, para que permita tantos semáforos como Sedna necesita para su ejecución añadiendo la linea kernel.sem = 250 64000 32 256 al archivo /etc/sysctl.conf
+				<br><br>
+			Una vez hecho esto, podemos iniciar Sedna mediante el comando /bin/se_gov y ejecutar cualquier comando de los presentes en dicho directorio bin. (Desde la documentación de Sedna, podemos consultar que hace cada uno).
+				<br><br>
+			Uno de los más básicos es ./se_cbd <nombre> mediante el cual creamos una base de datos, con la cual empezar a trabajar.
+				<br><br>
+			Además es recomendable acceder a la carpeta /examples/comandlines/ donde podemos ejecutar algún código de ejemplo para ver su funcionamiento.
+				<br><br>
+			Para finalizar, mostramos la ejecución de uno de los comandos de ejemplo, para ver como sería la salida que nos muestra Sedna
+				<br><br>
+		</p>
+	</section>
+	<br><br>
+	<table width="100%">
+				<tbody>
+					<tr>
+						<td>
+							<ul id="menu">
+								<li><a href="PaginaPricipal.html"><font color="black" face="Impact">PaginaPrincipal</font></a></li>
+								<li><a href="basex.html"><font color="black" face="Impact">BaseX</font></a></li>
+								<li><a href="existdb.html"><font color="black" face="Impact">eXist-db</font></a></li>
+								<li><a href="marklogic.html"><font color="black" face="Impact">MarkLogic</font></a></li>
+								<li><a href="sedna.html"><font color="black" face="Impact">Sedna</font></a></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+	</table>
+</body>
+</html>
